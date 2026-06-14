@@ -8,6 +8,9 @@ import CuteAnimals from "./CuteAnimals";
 interface MemorySlidesProps {
   currentSlide: number;
   onYesClick: () => void;
+  isActive?: boolean;     // Added to match App.tsx props
+  slideNumber?: number;   // Added to match App.tsx props
+  totalSlides?: number;   // Added to match App.tsx props
 }
 
 const sadMessages = [
@@ -66,7 +69,7 @@ const memories = [
   },
 ];
 
-export default function MemorySlides({ currentSlide, onYesClick }: MemorySlidesProps) {
+export default function MemorySlides({ currentSlide, onYesClick, slideNumber, totalSlides }: MemorySlidesProps) {
   const [noPosition, setNoPosition] = useState({ x: 0, y: 0 });
   const [fairyMood, setFairyMood] = useState<"neutral" | "happy">("neutral");
   const [noMessage, setNoMessage] = useState("NO 😢");
@@ -150,6 +153,9 @@ export default function MemorySlides({ currentSlide, onYesClick }: MemorySlidesP
   if (currentSlide === 0) return null;
 
   const memory = memories[currentSlide - 1];
+
+  // Safeguard in case currentSlide goes out of array bounds
+  if (!memory) return null;
 
   return (
     <AnimatePresence mode="wait">
@@ -333,7 +339,7 @@ export default function MemorySlides({ currentSlide, onYesClick }: MemorySlidesP
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
-          Slide {currentSlide + 1} of 6
+          Slide {slideNumber || currentSlide + 1} of {totalSlides || 7}
         </motion.p>
       </motion.div>
     </AnimatePresence>

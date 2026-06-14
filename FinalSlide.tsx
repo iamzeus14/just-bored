@@ -100,7 +100,7 @@ export default function FinalSlide({ isActive }: FinalSlideProps) {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5 }}
           >
-            But honestly? I miss the time spent with you.
+            But honestly? I miss the time spent with you chanchal.
           </motion.p>
           <motion.p
             className="text-lg md:text-xl text-white leading-relaxed mt-4"
@@ -116,7 +116,10 @@ export default function FinalSlide({ isActive }: FinalSlideProps) {
             animate={{ opacity: 1 }}
             transition={{ delay: 2.1 }}
           >
-            At least for me. 💕
+            At least for me. 💕       
+
+                        - ABHI 
+            
           </motion.p>
         </motion.div>
 

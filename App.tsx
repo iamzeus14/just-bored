@@ -1,17 +1,16 @@
-kimport { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import IntroSlide from './IntroSlide';
-import Slide2 from './Slide2';
-import Slide3 from './Slide3';
-import Slide4 from './Slide4';
-import Slide5 from './Slide5';
-import MemorySlides from './MemorySlides';
-import FinalSlide from './FinalSlide';
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import IntroSlide from "./IntroSlide";
+import Slide2 from "./Slide2";
+import Slide3 from "./Slide3";
+import Slide4 from "./Slide4";
+import Slide5 from "./Slide5";
+import MemorySlides from "./MemorySlides";
+import FinalSlide from "./FinalSlide";
 
 export default function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  // Updated to 7 so MemorySlides isn't skipped
-  const totalSlides = 7; 
+  const totalSlides = 7;
 
   const nextSlide = () => {
     setCurrentSlide((prev) => Math.min(prev + 1, totalSlides - 1));

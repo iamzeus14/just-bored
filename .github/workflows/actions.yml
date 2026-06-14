@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+kkname: Deploy to GitHub Pages
 
 on:
   push:
@@ -21,10 +21,15 @@ jobs:
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
+
+      - name: Debug - List files
+        run: ls -R  # This helps identify if your files are in a sub-folder
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+
       - name: Install dependencies
         run: |
           if [ -f package-lock.json ]; then
@@ -32,12 +37,16 @@ jobs:
           else
             npm install
           fi
+
       - name: Build application
         run: npm run build
+
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          # If your build folder is 'dist', change this back to 'dist'
+          # Most React apps use 'build'
+          path: build 
 
   deploy:
     needs: build

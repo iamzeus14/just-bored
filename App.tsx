@@ -1,4 +1,4 @@
-kkimport { useState } from "react";
+import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import IntroSlide from "./IntroSlide";
 import Slide2 from "./Slide2";

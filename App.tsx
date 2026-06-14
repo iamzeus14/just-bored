@@ -1,4 +1,4 @@
-import { useState } from "react";
+kimport { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import IntroSlide from './IntroSlide';
 import Slide2 from './Slide2';
@@ -10,7 +10,8 @@ import FinalSlide from './FinalSlide';
 
 export default function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = 6;
+  // Updated to 7 so MemorySlides isn't skipped
+  const totalSlides = 7; 
 
   const nextSlide = () => {
     setCurrentSlide((prev) => Math.min(prev + 1, totalSlides - 1));
@@ -65,9 +66,18 @@ export default function App() {
           />
         )}
         {currentSlide === 5 && (
+          <MemorySlides
+            key="memory"
+            isActive={currentSlide === 5}
+            onYesClick={nextSlide}
+            slideNumber={6}
+            totalSlides={totalSlides}
+          />
+        )}
+        {currentSlide === 6 && (
           <FinalSlide
             key="final"
-            isActive={currentSlide === 5}
+            isActive={currentSlide === 6}
           />
         )}
       </AnimatePresence>

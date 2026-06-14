@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import IntroSlide from "./components/IntroSlide";
-import Slide2 from "./components/Slide2";
-import Slide3 from "./components/Slide3";
-import Slide4 from "./components/Slide4";
-import Slide5 from "./components/Slide5";
-import FinalSlide from "./components/FinalSlide";
+import IntroSlide from './IntroSlide';
+import Slide2 from './Slide2';
+import Slide3 from './Slide3';
+import Slide4 from './Slide4';
+import Slide5 from './Slide5';
+import MemorySlides from './MemorySlides';
+import FinalSlide from './FinalSlide';
 
 export default function App() {
   const [currentSlide, setCurrentSlide] = useState(0);

@@ -67,7 +67,7 @@ export default function App() {
         {currentSlide === 5 && (
           <MemorySlides
             key="memory"
-            currentSlide={currentSlide} {/* This line fixes the error */}
+            currentSlide={currentSlide}
             isActive={currentSlide === 5}
             onYesClick={nextSlide}
             slideNumber={6}

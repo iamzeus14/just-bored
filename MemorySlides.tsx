@@ -32,15 +32,15 @@ const memories = [
   {
     title: "That Magical Day...",
     question: "Do you remember 9th Feb 2024?",
-    description: "The day of my farewell... You made it sooooo magical! I can never forget that day. Every moment with you was special.",
+    description: "The day of my farewell... I was sad as a period of my life MY SCHOOL LIFE was ending... But i was happier to see you by my side... Thay day i cant forget.... You made it sooooo magical! I can never forget that day. Every moment with you was special. ",
     subtext: "You were the highlight of my farewell 💫",
     icon: "✨",
   },
   {
     title: "School Corridors",
     question: "Remember our walks?",
-    description: "Spending time in school corridors was my best memory. Walking beside you, talking about everything and nothing...",
-    subtext: "Those corridors felt like our own world 🌸",
+    description: "Spending time in school corridors was my best memory. Waiting for the lunch break just to see you. Walking beside you, talking about everything and nothing... especially during the free period we used to get during annual days... Sitting on the jhula ans ofc playing TT and BB ",
+    subtext: "Those moments felt like our own world 🌸",
     icon: "🏫",
   },
   {
@@ -60,7 +60,7 @@ const memories = [
   {
     title: "Still Waiting",
     question: "Can I still wait for you?",
-    description: "I know we're not together anymore, but my heart still beats for you. I'm not proposing, just confessing... I still love you.",
+    description: "I know we're not together anymore, but my heart still beats for you. I'm not proposing, just confessing....",
     subtext: "Some feelings never fade away 🌹",
     icon: "💗",
   },

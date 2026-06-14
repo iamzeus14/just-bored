@@ -1,4 +1,4 @@
-import { useState } from "react";
+kkimport { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import IntroSlide from "./IntroSlide";
 import Slide2 from "./Slide2";
@@ -67,6 +67,7 @@ export default function App() {
         {currentSlide === 5 && (
           <MemorySlides
             key="memory"
+            currentSlide={currentSlide} {/* This line fixes the error */}
             isActive={currentSlide === 5}
             onYesClick={nextSlide}
             slideNumber={6}

@@ -22,9 +22,6 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Debug - List files
-        run: ls -R  # This helps identify if your files are in a sub-folder
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -44,9 +41,7 @@ jobs:
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # If your build folder is 'dist', change this back to 'dist'
-          # Most React apps use 'build'
-          path: build 
+          path: dist # Vite compiles everything into the 'dist' directory
 
   deploy:
     needs: build
